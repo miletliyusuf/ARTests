@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880BB8781F1FA3BA00516719 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880BB8771F1FA3BA00516719 /* Utility.swift */; };
 		880D45E41F1F7C4000053743 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 880D45E31F1F4CDB00053743 /* art.scnassets */; };
 		884122621F15047D0020D977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884122611F15047D0020D977 /* AppDelegate.swift */; };
 		884122641F15047D0020D977 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884122631F15047D0020D977 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		880BB8771F1FA3BA00516719 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		880D45E31F1F4CDB00053743 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		8841225E1F15047D0020D977 /* ARTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		884122611F15047D0020D977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				8841226A1F15047D0020D977 /* LaunchScreen.storyboard */,
 				8841226D1F15047D0020D977 /* Info.plist */,
 				884122831F1508D40020D977 /* SpaceShip.swift */,
+				880BB8771F1FA3BA00516719 /* Utility.swift */,
 			);
 			path = ARTestApp;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880BB8781F1FA3BA00516719 /* Utility.swift in Sources */,
 				884122841F1508D40020D977 /* SpaceShip.swift in Sources */,
 				884122641F15047D0020D977 /* ViewController.swift in Sources */,
 				884122621F15047D0020D977 /* AppDelegate.swift in Sources */,

@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sceneView:ARSCNView!
     @IBOutlet weak var countLabel:UILabel!
     
+    let utilities = Utility()
     var level:Int = 1
     var counter:Int = 0 {
         didSet {
@@ -41,9 +42,9 @@ class ViewController: UIViewController {
     func reloadLevel() {
         sceneView.scene.rootNode.removeFromParentNode()
         
-        for index in 0...level*3 {
+        for index in 0...level*3 - 1 {
             self.addObject()
-            print("Added \(index) object")
+            print("Added \(index + 1) enemy")
         }
     }
     
@@ -52,12 +53,13 @@ class ViewController: UIViewController {
         let ship = SpaceShip()
         ship.loadModal()
         
-        let xPos = randomPosition(lowerBound: -20.5, upperBound: 20.5)
-        let yPos = randomPosition(lowerBound: 0.5, upperBound: 20)
-        let zPos = randomPosition(lowerBound: -100.5, upperBound: -50)
+        let xPos = utilities.randomGenerator(lowerBound: -20.5, upperBound: 20.5)
+        let yPos = utilities.randomGenerator(lowerBound: 0.5, upperBound: 20 * Float(level))
+        let zPos = utilities.randomGenerator(lowerBound: -100.5 * Float(level), upperBound: -50)
         
         ship.position = SCNVector3(xPos,yPos,zPos) //1 meter away from camera
         sceneView.scene.rootNode.addChildNode(ship)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -76,15 +78,11 @@ class ViewController: UIViewController {
                         self.reloadLevel()
                     }
                     else {
-                        
+                        self.countLabel.text = "Shotted Objects = \(counter)"
                     }
                 }
             }
         }
-    }
-    
-    func randomPosition (lowerBound lower:Float, upperBound upper:Float) -> Float {
-        return Float(arc4random()) / Float(UInt32.max) * (lower-upper) + upper
     }
     
     override func didReceiveMemoryWarning() {
