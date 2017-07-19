@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880D45E41F1F7C4000053743 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 880D45E31F1F4CDB00053743 /* art.scnassets */; };
 		884122621F15047D0020D977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884122611F15047D0020D977 /* AppDelegate.swift */; };
 		884122641F15047D0020D977 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884122631F15047D0020D977 /* ViewController.swift */; };
 		884122671F15047D0020D977 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884122651F15047D0020D977 /* Main.storyboard */; };
 		884122691F15047D0020D977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884122681F15047D0020D977 /* Assets.xcassets */; };
 		8841226C1F15047D0020D977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8841226A1F15047D0020D977 /* LaunchScreen.storyboard */; };
 		884122771F15047E0020D977 /* ARTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884122761F15047E0020D977 /* ARTestAppTests.swift */; };
-		884122821F1508530020D977 /* ship.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 884122811F1508530020D977 /* ship.scnassets */; };
 		884122841F1508D40020D977 /* SpaceShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884122831F1508D40020D977 /* SpaceShip.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		880D45E31F1F4CDB00053743 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		8841225E1F15047D0020D977 /* ARTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		884122611F15047D0020D977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		884122631F15047D0020D977 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		884122721F15047E0020D977 /* ARTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		884122761F15047E0020D977 /* ARTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTestAppTests.swift; sourceTree = "<group>"; };
 		884122781F15047E0020D977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		884122811F1508530020D977 /* ship.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = ship.scnassets; path = ../../../Desktop/ship.scnassets; sourceTree = "<group>"; };
 		884122831F1508D40020D977 /* SpaceShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceShip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +84,7 @@
 				884122611F15047D0020D977 /* AppDelegate.swift */,
 				884122631F15047D0020D977 /* ViewController.swift */,
 				884122651F15047D0020D977 /* Main.storyboard */,
-				884122811F1508530020D977 /* ship.scnassets */,
+				880D45E31F1F4CDB00053743 /* art.scnassets */,
 				884122681F15047D0020D977 /* Assets.xcassets */,
 				8841226A1F15047D0020D977 /* LaunchScreen.storyboard */,
 				8841226D1F15047D0020D977 /* Info.plist */,
@@ -112,6 +112,7 @@
 				8841225A1F15047D0020D977 /* Sources */,
 				8841225B1F15047D0020D977 /* Frameworks */,
 				8841225C1F15047D0020D977 /* Resources */,
+				880D45E51F1F7D9A00053743 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -185,9 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8841226C1F15047D0020D977 /* LaunchScreen.storyboard in Resources */,
+				880D45E41F1F7C4000053743 /* art.scnassets in Resources */,
 				884122691F15047D0020D977 /* Assets.xcassets in Resources */,
 				884122671F15047D0020D977 /* Main.storyboard in Resources */,
-				884122821F1508530020D977 /* ship.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +200,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		880D45E51F1F7D9A00053743 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xattr -cr ~/Library/Developer/Xcode/DerivedData || echo Clear\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8841225A1F15047D0020D977 /* Sources */ = {
@@ -360,12 +378,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FDQWYD8S6L;
 				INFOPLIST_FILE = ARTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yusuf.miletli.ARTestAp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yusuf.miletli.ARTestAp4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -378,12 +397,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FDQWYD8S6L;
 				INFOPLIST_FILE = ARTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yusuf.miletli.ARTestAp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yusuf.miletli.ARTestAp4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

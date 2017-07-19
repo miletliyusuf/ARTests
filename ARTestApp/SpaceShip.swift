@@ -11,7 +11,8 @@ import ARKit
 class SpaceShip: SCNNode {
    
     func loadModal() {
-        guard let virtualSceneObject = SCNScene(named: "ship.scnassets/ship.scn") else {return}
+        
+        guard let virtualSceneObject = SCNScene(named: "art.scnassets/ship.scn") else { return }
         
         let wrapperNode = SCNNode()
         
